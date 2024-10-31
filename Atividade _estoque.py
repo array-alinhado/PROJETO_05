@@ -1,7 +1,7 @@
 import os
 os.system("cls || clear")
 #            Trio Tormenta.
-# Grupo = João Felipe | Itauã Gualberto 
+# Grupo = João Felipe | Itauã Gualberto | Leonardo Araújo
 
 # Sala = G-93313.
 
