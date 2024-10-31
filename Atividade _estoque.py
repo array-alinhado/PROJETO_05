@@ -1,8 +1,9 @@
 import os
 os.system("cls || clear")
+#            Trio Tormenta.
+# Grupo = João Felipe | Itauã Gualberto | leonardo Araujo.
 
-# Grupo = joão, Itauã Gualberto, leonardo
-# Sala = G-93313
+# Sala = G-93313.
 
 
 def limpar_tela():
