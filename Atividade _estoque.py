@@ -2,7 +2,7 @@ import os
 os.system("cls || clear")
 
 # Grupo = joão, Itauã Gualberto, leonardo
-# 
+# Sala = G-93313
 
 
 def limpar_tela():
