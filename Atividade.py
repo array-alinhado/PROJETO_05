@@ -1,6 +1,10 @@
 import os
 os.system("cls || clear")
 
+# Grupo = joão, Itauã Gualberto, leonardo
+# 
+
+
 def limpar_tela():
     os.system("cls || clear")
 
@@ -13,7 +17,7 @@ class Produto:
         self.codigo = codigo
     
     def __str__(self):
-        return f"{self.codigo} - {self.nome}, Preço: {self.preco}, Quantidade em estoque: {self.quantidade}"
+        return f"{self.codigo} - {self.nome}, Preço:$ {self.preco}, Quantidade em estoque: {self.quantidade}"
 
 # Classe Estoque
 class Estoque:
@@ -24,8 +28,8 @@ class Estoque:
         self.produtos.append(produto)
         print(f"O produto '{produto.nome}' foi adicionado ao estoque.")
 
-    def buscar_produto_por_nome(self, nome):
-        resultados = [produto for produto in self.produtos if nome.lower() in produto.nome.lower()]
+    def buscar_produto_por_codigo(self, codigo):
+        resultados = [produto for produto in self.produtos if codigo.lower() in produto.codigo.lower()]
         return resultados
 
     def remover_produto(self, codigo):
@@ -58,19 +62,20 @@ class Estoque:
                         produto.quantidade -= quantidade
                         print(f"Saída registrada: -{quantidade} do produto '{produto.nome}'.")
                     else:
-                        print(f"Estoque insuficiente para o produto '{produto.nome}'.")
+                        print(f"Não tem estoque para este produto '{produto.nome}'.")
                 return
-        print(f"Produto com código {codigo} não encontrado.")
+        print(f"Produto com código {codigo} não encontrado")
 
 # Função para exibir o menu
 def exibir_menu():
-    print("\nMenu:")
+    print("\n====== Menu ======")
     print("1. Adicionar produto")
-    print("2. Buscar produto por nome")
+    print("2. Procurar produto por nome")
     print("3. Remover produto")
     print("4. Listar todos os produtos")
     print("5. Registrar entrada/saída de produto")
     print("6. Sair")
+    print("======================")
 
 # Função principal
 def main():
@@ -90,8 +95,8 @@ def main():
             limpar_tela()
 
         elif opcao == '2':
-            nome = input("Digite o nome do produto para buscar: ")
-            resultados = estoque.buscar_produto_por_nome(nome)
+            nome = input("Digite o codigo do produto para buscar: ")
+            resultados = estoque.buscar_produto_por_codigo(codigo)
             if resultados:
                 print("Produtos encontrados:")
                 for produto in resultados:
